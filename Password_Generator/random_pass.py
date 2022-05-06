@@ -14,6 +14,7 @@ def random_password():
     if password_length > int(20) or password_length < int(1):
         print("You did not enter a valid number")
         password_length = int(input("Please enter a new number: "))
+    
     for i in range(password_length):
         password += random.choice(letter_list + number_list + charecter_list)
     return "Your password is: " + password
