@@ -12,6 +12,4 @@ def random_password():
         random_pass += random.choice(letter_list + number_list + charecter_list)
     return "Your password is: " + random_pass
 
-
-
 print(random_password())
