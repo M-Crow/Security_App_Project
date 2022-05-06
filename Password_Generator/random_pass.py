@@ -15,9 +15,11 @@ def random_password():
     password_length = int(input("How long would you like your password to be? Please enter a number 1-20: "))
     
     # If the input is above 20, or below 1, the user will have to input another number within range
-    if password_length > int(20) or password_length < int(1):
+    while password_length > int(20) or password_length < int(1):
         print("You did not enter a valid number")
         password_length = int(input("Please enter a new number: "))
+    if password_length > int(20) or password_length < int(1):
+        return password_length
     
     # Randomly generates a password of x length. X is equal to the password_lenght the user provided
     for i in range(password_length):
