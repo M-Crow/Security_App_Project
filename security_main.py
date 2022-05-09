@@ -1,10 +1,12 @@
 # Main hub for security app
 
 from multiprocessing.sharedctypes import Value
-import string, random, pyfiglet, time
+import string, random, time
+#import pyfiglet
 
-print(pyfiglet.figlet_format("Welcome to your Security Hub"))
+#print(pyfiglet.figlet_format("Welcome to your Security Hub"))
 
+# Select what security program you would like to use
 def main_screen_selection():
         selection = input("Please select and option to continue: (1) for Encryption, (2) for a random password ")
         if selection == "1":
@@ -14,8 +16,9 @@ def main_screen_selection():
             print("You will now be redirected to the Random Password program")
             print(random_password_generator())
 
+# Encryption/Decryption cipher
 def encryption_cipher():
-
+    # Dictionary list of letters in alphabetic order paired with the inverse
     alpha = {
         'a': 'z',
         'b': 'y',
@@ -45,6 +48,7 @@ def encryption_cipher():
         'z': 'a',
         ' ': ' ',
     }
+    # Takes the alpha dictionary list and reverses the key, value pairs
     inverse_alpha = {v:k for k, v in alpha.items()}
     encrypted_message = []
 
@@ -82,6 +86,7 @@ def encryption_cipher():
 
     main_call_chiper()
 
+# Random password generator
 def random_password_generator():
     # List containing all uppercase/lowercase letters, numbers 0-9, and some specical charecters
     letter_list = list(string.ascii_letters)
@@ -111,4 +116,5 @@ def random_password_generator():
     # Calls the function to generate a random password 
     print(random_password())
 
+# Calls the selection screen function to start the program
 main_screen_selection()
