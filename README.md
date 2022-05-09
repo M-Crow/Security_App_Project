@@ -5,5 +5,5 @@ Various Python projects related to security
 
 2. Random Password Generator:
 
-3. Eventually a comeplte app containing all my different security projects:
+3. Eventually a complete app containing all my different security projects:
 
