@@ -6,6 +6,13 @@ import string, random, time
 
 #print(pyfiglet.figlet_format("Welcome to your Security Hub"))
 
+# Flask web-app
+def flask_web():
+    return filler
+# Login page for the app 
+def login_screen():
+    return filler
+
 # Select what security program you would like to use
 def main_screen_selection():
         selection = input("Please select and option to continue: (1) for Encryption, (2) for a random password ")
